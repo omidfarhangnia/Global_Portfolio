@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Global Clone</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="text/tailwindcss" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="w-full h-[100vh] relative bg-black overflow-hidden">
+      <div
+        class="pages page__num__1 w-full h-[100vh] z-[1] absolute bg-black text-white p-5"
+      >
+        <h1 class="text-[50px] font-bold m-[50px]">page header num 1</h1>
+        <p class="text-[20px] font-bold m-[50px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus maxime, optio cum deserunt ratione aliquam tempore non
+          debitis dicta deleniti facere ab voluptatem blanditiis perspiciatis
+          iste minima tenetur a consequatur.
+        </p>
+        <hr />
+        <p class="text-[20px] font-bold m-[50px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+          consectetur delectus aperiam atque numquam ipsa quidem sint ducimus
+          sapiente eveniet eius, sunt voluptatem accusamus esse ad error animi
+          impedit quod?
+        </p>
+      </div>
+      <div
+        class="pages page__num__2 w-full h-[100vh] z-[-1] absolute bg-black text-white p-5"
+      >
+        <h1 class="text-[50px] font-bold m-[50px]">page header num 2</h1>
+        <p class="text-[20px] font-bold m-[50px]">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ipsa
+          ut veritatis, mollitia possimus illo maxime suscipit repellat, eum
+          quas quo alias sunt officia commodi totam vel iste sequi labore?
+        </p>
+        <hr />
+        <p class="text-[20px] font-bold m-[50px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+          maxime facilis molestias quaerat veniam in fugit recusandae sed atque
+          quos consequatur voluptate dignissimos neque? Enim ea error saepe
+          dolor tempora.
+        </p>
+      </div>
+      <div
+        class="pages page__num__3 w-full h-[100vh] z-[-1] absolute bg-black text-white p-5"
+      >
+        <h1 class="text-[50px] font-bold m-[50px]">page header num 3</h1>
+        <p class="text-[20px] font-bold m-[50px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+          similique laudantium accusamus saepe recusandae voluptates, ratione
+          suscipit cumque libero ad ipsam ab culpa dolor! Vero repellendus enim
+          velit praesentium? Similique.
+        </p>
+        <hr />
+        <p class="text-[20px] font-bold m-[50px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+          veritatis atque, rem ad voluptate quisquam dolorum magnam. Corrupti
+          maxime voluptatem accusamus sint velit eaque. Corrupti obcaecati velit
+          rerum praesentium aperiam.
+        </p>
+      </div>
+      <div
+        class="pages page__num__4 w-full h-[100vh] z-[-1] absolute bg-black text-white p-5"
+      >
+        <h1 class="text-[50px] font-bold m-[50px]">page header num 4</h1>
+        <p class="text-[20px] font-bold m-[50px]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quis
+          temporibus voluptatum. Repellendus, fugiat ratione nostrum tempora
+          fuga voluptatibus deleniti voluptatem iure optio totam id error amet
+          dolore, magni laborum.
+        </p>
+        <hr />
+        <p class="text-[20px] font-bold m-[50px]">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur,
+          minima alias harum laborum omnis totam magnam quo libero quibusdam
+          quae cumque, id quidem optio laudantium quasi nostrum! Ipsam, eos
+          dolore.
+        </p>
+      </div>
+      <div
+        class="pages page__num__5 w-full h-[100vh] z-[-1] absolute bg-black text-white p-5"
+      >
+        <h1 class="text-[50px] font-bold m-[50px]">page header num 5</h1>
+        <p class="text-[20px] font-bold m-[50px]">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti in
+          doloremque blanditiis dolorum, provident modi magni voluptatibus
+          aperiam sunt quasi recusandae ab laborum dolorem tenetur,
+          reprehenderit velit qui expedita culpa.
+        </p>
+        <hr />
+        <p class="text-[20px] font-bold m-[50px]">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
+          nostrum modi aspernatur enim sequi reiciendis, laudantium non velit
+          natus fugit quae id dicta, eaque asperiores soluta omnis aliquam rem
+          iusto.
+        </p>
+      </div>
+      <div class="divider w-full h-[100vh] bg-black z-[0]"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      const pages = gsap.utils.toArray(".pages");
+      const isTouchSupported = "ontouchstart" in document.documentElement;
+      let isMovingAllowed = true;
+      let pageData = {
+        prevPage: 5,
+        currentPage: 1,
+        nextPage: 2,
+      };
+
+      Observer.create({
+        target: window,
+        type: "wheel,pointer",
+        onUp: (e, a) => {
+          if (!isMovingAllowed) return;
+          if (isTouchSupported) {
+            goNextPage();
+          } else {
+            goPreviousPage();
+          }
+        },
+        onDown: (e) => {
+          if (!isMovingAllowed) return;
+          if (isTouchSupported) {
+            goPreviousPage();
+          } else {
+            goNextPage();
+          }
+        },
+      });
+
+      function goNextPage() {
+        setStyle("next");
+        updatePageNumbers("next");
+      }
+
+      function goPreviousPage() {
+        setStyle("previous");
+        updatePageNumbers("previous");
+      }
+
+      function setStyle(status) {
+        const tl = gsap.timeline();
+
+        tl.to(`.page__num__${pageData.currentPage}`, {
+          y: "-=50px",
+          duration: 0.3,
+          opacity: 0,
+          ease: "circ.in",
+          onStart: () => {
+            isMovingAllowed = false;
+          },
+        })
+          .set(`.page__num__${pageData.currentPage}`, {
+            y: 0,
+            zIndex: "-1",
+            opacity: 1,
+          })
+          .set(
+            `.page__num__${
+              status === "next" ? pageData.nextPage : pageData.prevPage
+            }`,
+            {
+              zIndex: "1",
+              opacity: 0,
+            }
+          )
+          .from(
+            `.page__num__${
+              status === "next" ? pageData.nextPage : pageData.prevPage
+            }`,
+            {
+              y: "+=50px",
+              duration: 0.3,
+              opacity: "1",
+              onComplete: () => {
+                isMovingAllowed = true;
+              },
+            }
+          );
+      }
+
+      function increaseNum(vairable) {
+        if (pageData[vairable] === 5) {
+          pageData[vairable] = 1;
+        } else {
+          pageData[vairable]++;
+        }
+      }
+
+      function decreaseNum(vairable) {
+        if (pageData[vairable] === 1) {
+          pageData[vairable] = 5;
+        } else {
+          pageData[vairable]--;
+        }
+      }
+
+      function updatePageNumbers(status) {
+        if (status === "next") {
+          // updating data in next status
+          increaseNum("prevPage");
+          increaseNum("currentPage");
+          increaseNum("nextPage");
+        } else if (status === "previous") {
+          // updating data in previous status
+          decreaseNum("prevPage");
+          decreaseNum("currentPage");
+          decreaseNum("nextPage");
+        }
+      }
+
+      // // other page update
+      // const othePagesSet = new Set([1, 2, 3, 4, 5]);
+      // othePagesSet.delete(pageData.currentPage);
+      // othePagesSet.delete(pageData.nextPage);
+      // pageData.otherPages = Array.from(othePagesSet);
+    </script>
+  </body>
+</html>
