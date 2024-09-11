@@ -1,3 +1,18 @@
 @layer utilities {
+  .mainContainer {
+    perspective: 1500px;
+  }
 
+  .pageContainer {
+    position: relative;
+    outline: 0px solid #0f33ff;
+    transform-origin: 0% 50%;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s, outline 0.4s;
+  }
+
+  .perspectivePage {
+    outline: 30px solid #0f33ff;
+    transform: translateZ(-100px) translateX(30%) rotateY(45deg) scale(0.5);
+  }
 }
