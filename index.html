@@ -5,32 +5,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="bg-white mainContainer">
+    <div
+      class="bg-[#0C0C0C] w-[100vw] h-[100vh] mainContainer flex flex-col items-center"
+    >
       <div
-        class="pageContainer w-full h-[100vh] relative bg-black overflow-hidden"
+        class="pageContainer w-full max-w-[1400px] h-[100vh] fixed bg-[#0C0C0C] flex flex-col items-center justify-end overflow-hidden"
       >
+        <header class="w-full z-[2] w-full px-[5%] py-5">
+          <nav class="flex justify-between items-center">
+            <a class="flex items-center"
+              ><img src="./public/logo.png" class="mr-3" alt="page logo" />
+              <span class="text-white font-[900]">GLOBAL</span>
+            </a>
+            <button class="nav--toggle mr-3">
+              <span></span>
+            </button>
+          </nav>
+        </header>
         <div
-          class="pages page__num__1 w-full h-[100vh] z-[1] absolute bg-black text-white p-5"
+          class="pages page__num__1 flex flex-col w-full max-w-[1000px] h-[75vh] sm:h-[80vh] z-[1] absolute text-white px-[5%]"
         >
-          <h1 class="text-[50px] font-bold m-[50px]">page header num 1</h1>
-          <p class="text-[20px] font-bold m-[50px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus maxime, optio cum deserunt ratione aliquam tempore
-            non debitis dicta deleniti facere ab voluptatem blanditiis
-            perspiciatis iste minima tenetur a consequatur.
-          </p>
-          <hr />
-          <p class="text-[20px] font-bold m-[50px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-            consectetur delectus aperiam atque numquam ipsa quidem sint ducimus
-            sapiente eveniet eius, sunt voluptatem accusamus esse ad error animi
-            impedit quod?
-          </p>
+          <div class="flex w-full justify-evenly">
+            <div class="w-full sm:w-[50%]">
+              <h1 class="text-[55px] font-[900] leading-[55px]">
+                Your next <br />
+                interactive <br />
+                experience
+              </h1>
+              <button>
+                hire us
+                <svg
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 150 118"
+                  style="enable-background: new 0 0 150 118"
+                  xml:space="preserve"
+                >
+                  <g
+                    transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)"
+                  >
+                    <path
+                      d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"
+                    ></path>
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <img
+              src="./public/introduction-visual.png"
+              alt="this is an astronaut"
+              class="hidden sm:block"
+            />
+          </div>
+          <div>
+            <div>
+              <h3>Metiew & Smith</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
+              </p>
+            </div>
+            <div>
+              <h3>Fantasy interactive</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
+              </p>
+            </div>
+            <div>
+              <h3>Paul & shark</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
+              </p>
+            </div>
+          </div>
         </div>
         <div
-          class="pages page__num__2 w-full h-[100vh] z-[-1] absolute bg-black text-white p-5"
+          class="pages page__num__2 w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
         >
           <h1 class="text-[50px] font-bold m-[50px]">page header num 2</h1>
           <p class="text-[20px] font-bold m-[50px]">
@@ -47,7 +108,7 @@
           </p>
         </div>
         <div
-          class="pages page__num__3 w-full h-[100vh] z-[-1] absolute bg-black text-white p-5"
+          class="pages page__num__3 w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
         >
           <h1 class="text-[50px] font-bold m-[50px]">page header num 3</h1>
           <p class="text-[20px] font-bold m-[50px]">
@@ -65,7 +126,7 @@
           </p>
         </div>
         <div
-          class="pages page__num__4 w-full h-[100vh] z-[-1] absolute bg-black text-white p-5"
+          class="pages page__num__4 w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
         >
           <h1 class="text-[50px] font-bold m-[50px]">page header num 4</h1>
           <p class="text-[20px] font-bold m-[50px]">
@@ -83,7 +144,7 @@
           </p>
         </div>
         <div
-          class="pages page__num__5 w-full h-[100vh] z-[-1] absolute bg-black text-white p-5"
+          class="pages page__num__5 w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
         >
           <h1 class="text-[50px] font-bold m-[50px]">page header num 5</h1>
           <p class="text-[20px] font-bold m-[50px]">
@@ -100,7 +161,7 @@
             iusto.
           </p>
         </div>
-        <div class="divider w-full h-[100vh] bg-black z-[0]"></div>
+        <div class="divider w-full h-[100vh] bg-[#0C0C0C] z-[0]"></div>
       </div>
     </div>
 
@@ -117,26 +178,26 @@
         nextPage: 2,
       };
 
-      Observer.create({
-        target: window,
-        type: "wheel,pointer",
-        onUp: (e, a) => {
-          if (!isMovingAllowed) return;
-          if (isTouchSupported) {
-            goNextPage();
-          } else {
-            goPreviousPage();
-          }
-        },
-        onDown: (e) => {
-          if (!isMovingAllowed) return;
-          if (isTouchSupported) {
-            goPreviousPage();
-          } else {
-            goNextPage();
-          }
-        },
-      });
+      // Observer.create({
+      //   target: window,
+      //   type: "wheel,pointer",
+      //   onUp: (e, a) => {
+      //     if (!isMovingAllowed) return;
+      //     if (isTouchSupported) {
+      //       goNextPage();
+      //     } else {
+      //       goPreviousPage();
+      //     }
+      //   },
+      //   onDown: (e) => {
+      //     if (!isMovingAllowed) return;
+      //     if (isTouchSupported) {
+      //       goPreviousPage();
+      //     } else {
+      //       goNextPage();
+      //     }
+      //   },
+      // });
 
       function goNextPage() {
         setStyle("next");

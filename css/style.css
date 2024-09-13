@@ -1,4 +1,12 @@
 @layer utilities {
+  body {
+    font-family: "Montserrat", "Courier New", Courier, monospace;
+  }
+
+  .none {
+    display: none !important;
+  }
+
   .mainContainer {
     perspective: 1500px;
   }
@@ -14,5 +22,39 @@
   .perspectivePage {
     outline: 30px solid #0f33ff;
     transform: translateZ(-100px) translateX(30%) rotateY(45deg) scale(0.5);
+  }
+
+  .nav--toggle {
+    width: 30px !important;
+    height: 30px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .nav--toggle span {
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    background: white;
+  }
+
+  .nav--toggle::after,
+  .nav--toggle::before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 2px;
+
+  }
+  .nav--toggle::after {
+    top: 7px;
+  }
+  .nav--toggle::before {
+    bottom: 7px;
   }
 }
