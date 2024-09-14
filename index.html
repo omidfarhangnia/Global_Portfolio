@@ -43,9 +43,9 @@
                 experience
               </h1>
               <button
-                class="uppercase font-[900] flex relative justify-evenly items-center w-[100px] my-10 mx-4 py-2 after:transition-all after:absolute hover:after:w-full after:content-[''] after:w-[80%] after:h-full after:bg-[#0F33FF] after:right-0 after:z-[-1]"
+                class="uppercase font-[900] flex relative justify-evenly items-center w-[100px] my-10 mx-4 py-2 after:transition-all after:absolute hover:after:w-full after:content-[''] after:w-[80%] after:h-full after:bg-[--page-blue] after:right-0 after:z-[-1]"
               >
-                <p class="block text-[14px]">hire us</p>
+                <span class="block text-[14px]">hire us</span>
                 <svg
                   class="w-[20%]"
                   version="1.1"
@@ -121,22 +121,70 @@
           </p>
         </div>
         <div
-          class="pages page__num__3 w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
+          class="pages page__num__3 w-full h-[100vh] max-w-[1060px] z-[-1] absolute bg-[#0C0C0C] flex flex-col items-center justify-center text-white px-[5%] pb-[5%]"
         >
-          <h1 class="text-[50px] font-bold m-[50px]">page header num 3</h1>
-          <p class="text-[20px] font-bold m-[50px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-            similique laudantium accusamus saepe recusandae voluptates, ratione
-            suscipit cumque libero ad ipsam ab culpa dolor! Vero repellendus
-            enim velit praesentium? Similique.
-          </p>
-          <hr />
-          <p class="text-[20px] font-bold m-[50px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-            veritatis atque, rem ad voluptate quisquam dolorum magnam. Corrupti
-            maxime voluptatem accusamus sint velit eaque. Corrupti obcaecati
-            velit rerum praesentium aperiam.
-          </p>
+          <div
+            class="h-full sm:h-auto w-full flex justify-center items-center"
+          >
+            <div class="page3--headerContainer relative">
+              <h2
+                class="text-[55px] sm:max-md:text-[44px] md:text-[68px] font-[900] leading-[55px] md:leading-[65px] sm:leading-[40px] mb-10 relative page3--header"
+              >
+                We <br />
+                believe <span class="relative">in</span> <br />
+                passionate <br />
+                people
+              </h2>
+              <button
+                class="uppercase font-[900] flex relative justify-evenly items-center w-[100px] py-2"
+              >
+                <span class="block text-[14px]">career</span>
+                <svg
+                  class="w-[20%]"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 150 118"
+                  xml:space="preserve"
+                >
+                  <g
+                    transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)"
+                  >
+                    <path
+                      fill="#fff"
+                      d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"
+                    ></path>
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <img
+              class="hidden sm:block w-full md:h-[70vh] object-contain"
+              src="./public/about-visual.png"
+            />
+          </div>
+          <div
+            class="hidden sm:flex justify-between items-center self-center gap-[60px] mt-[-100px] md:mt-[-40px]"
+          >
+            <div class="page3--card winner--card relative">
+              <h5 class="font-[900] absolute bottom-[-30%] uppercase">
+                winners
+              </h5>
+            </div>
+            <div class="page3--card philosophy--card relative">
+              <h5 class="font-[900] absolute bottom-[-30%] uppercase">
+                Philosophy
+              </h5>
+            </div>
+            <div class="page3--card history--card relative">
+              <h5 class="font-[900] absolute bottom-[-30%] uppercase">
+                History
+              </h5>
+            </div>
+          </div>
         </div>
         <div
           class="pages page__num__4 w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
