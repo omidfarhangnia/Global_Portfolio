@@ -17,7 +17,7 @@
       class="bg-[#0C0C0C] w-[100vw] h-[100vh] mainContainer flex flex-col items-center"
     >
       <div
-        class="pageContainer w-full max-w-[1400px] h-[100vh] fixed bg-[#0C0C0C] flex flex-col items-center justify-end overflow-hidden"
+        class="pageContainer w-full max-w-[1550px] h-[100vh] fixed bg-[#0C0C0C] flex flex-col items-center justify-end overflow-hidden"
       >
         <header class="w-full z-[2] w-full px-[5%] py-5">
           <nav class="flex justify-between items-center">
@@ -31,18 +31,23 @@
           </nav>
         </header>
         <div
-          class="pages page__num__1 flex flex-col w-full max-w-[1000px] h-[75vh] sm:h-[80vh] z-[1] absolute text-white px-[5%]"
+          class="pages page__num__1 flex flex-col w-full max-w-[1060px] z-[1] absolute text-white px-[5%] pb-[5%] overflow-hidden"
         >
           <div class="flex w-full justify-evenly">
-            <div class="w-full sm:w-[50%]">
-              <h1 class="text-[55px] font-[900] leading-[55px]">
+            <div class="w-full sm:w-[45%] flex flex-col md:justify-center">
+              <h1
+                class="text-[55px] sm:max-md:text-[44px] md:text-[68px] font-[900] leading-[55px] md:leading-[65px]"
+              >
                 Your next <br />
                 interactive <br />
                 experience
               </h1>
-              <button>
-                hire us
+              <button
+                class="uppercase font-[900] flex relative justify-evenly items-center w-[100px] my-10 mx-4 py-2 after:transition-all after:absolute hover:after:w-full after:content-[''] after:w-[80%] after:h-full after:bg-[#0F33FF] after:right-0 after:z-[-1]"
+              >
+                <p class="block text-[14px]">hire us</p>
                 <svg
+                  class="w-[20%]"
                   version="1.1"
                   id="Layer_1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -50,13 +55,13 @@
                   x="0px"
                   y="0px"
                   viewBox="0 0 150 118"
-                  style="enable-background: new 0 0 150 118"
                   xml:space="preserve"
                 >
                   <g
                     transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)"
                   >
                     <path
+                      fill="#fff"
                       d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"
                     ></path>
                   </g>
@@ -66,25 +71,33 @@
             <img
               src="./public/introduction-visual.png"
               alt="this is an astronaut"
-              class="hidden sm:block"
+              class="hidden sm:block w-[55%]"
             />
           </div>
-          <div>
-            <div>
-              <h3>Metiew & Smith</h3>
-              <p>
+          <div
+            class="py-[33px] mb-[90px] flex gap-[40px] flex-col md:flex-row border-t-2 border-[#282828] border-solid text-[#a4a4a4]"
+          >
+            <div
+              class="hover:text-white transition-all select-none curser-default"
+            >
+              <h3 class="font-[900] uppercase md:mb-5">Metiew & Smith</h3>
+              <p class="font-[500] text-[14px]">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
               </p>
             </div>
-            <div>
-              <h3>Fantasy interactive</h3>
-              <p>
+            <div
+              class="hover:text-white transition-all select-none curser-default"
+            >
+              <h3 class="font-[900] uppercase md:mb-5">Fantasy interactive</h3>
+              <p class="font-[500] text-[14px]">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
               </p>
             </div>
-            <div>
-              <h3>Paul & shark</h3>
-              <p>
+            <div
+              class="hover:text-white transition-all select-none curser-default"
+            >
+              <h3 class="font-[900] uppercase md:mb-5">Paul & shark</h3>
+              <p class="font-[500] text-[14px]">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.
               </p>
             </div>

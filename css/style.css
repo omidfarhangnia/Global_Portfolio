@@ -49,7 +49,6 @@
     background: white;
     position: absolute;
     left: 2px;
-
   }
   .nav--toggle::after {
     top: 7px;
