@@ -142,6 +142,24 @@
   .history--card {
     background-image: url(../public/about-history.jpg);
   }
+
+  .works {
+    display: none;
+    scale: .8;
+  }
+
+  .works > p {
+    display: none;
+  }
+
+  div[childnum="1"] {
+    display: flex;
+    scale: 1;
+  }
+
+  div[childnum="1"] > p {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
@@ -153,5 +171,14 @@
   .page3--header::after {
     width: 11px;
     height: 11px;
+  }
+
+  div[childnum="0"],
+  div[childnum="2"] {
+    display: flex;
+  }
+
+  div[childnum="1"] img {
+    scale: 1.3;
   }
 }
