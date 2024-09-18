@@ -16,7 +16,7 @@
     <div
       class="bg-[#0C0C0C] w-[100vw] h-[100vh] mainContainer flex flex-col items-center"
     >
-      <div
+      <main
         class="pageContainer w-full max-w-[1550px] h-[100vh] fixed bg-[#0C0C0C] flex flex-col items-center justify-end overflow-hidden"
       >
         <header class="w-full z-[2] w-full px-[5%] py-5">
@@ -30,7 +30,7 @@
             </button>
           </nav>
         </header>
-        <div
+        <section
           class="pages page__num__1 flex flex-col w-full max-w-[1060px] z-[1] absolute text-white px-[5%] pb-[5%] overflow-hidden"
         >
           <div class="flex w-full justify-evenly">
@@ -102,30 +102,132 @@
               </p>
             </div>
           </div>
-        </div>
-        <div
-          class="pages page__num__2 w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
+        </section>
+        <section
+          class="pages page__num__2 max-w-[1000px] flex justify-center items-center w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
         >
-          <h1 class="text-[50px] font-bold m-[50px]">page header num 2</h1>
-          <p class="text-[20px] font-bold m-[50px]">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ipsa
-            ut veritatis, mollitia possimus illo maxime suscipit repellat, eum
-            quas quo alias sunt officia commodi totam vel iste sequi labore?
-          </p>
-          <hr />
-          <p class="text-[20px] font-bold m-[50px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
-            maxime facilis molestias quaerat veniam in fugit recusandae sed
-            atque quos consequatur voluptate dignissimos neque? Enim ea error
-            saepe dolor tempora.
-          </p>
-        </div>
-        <div
+          <div class="w-full flex flex-col">
+            <h2 class="text-[30px] font-[700] text-center mb-[20px] md:mb-[6rem]">
+              Selected work
+            </h2>
+            <div class="relative">
+              <div class="worksContainer flex items-center justify-center">
+                <div
+                  childnum="0"
+                  class="works flex-col justify-center items-center"
+                >
+                  <div class="w-[190px] h-[190px] mt-[10px]">
+                    <img
+                      class="object-cover object-top w-full h-full rounded-full"
+                      src="./public/work-victory.jpg"
+                    />
+                  </div>
+                  <h4 class="font-[800] my-[30px] uppercase text-center md:mt-[50px]">
+                    Victory
+                  </h4>
+                  <p class="max-w-[300px] font-[600] text-[15px] text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
+                    do.
+                  </p>
+                </div>
+                <div
+                  childnum="1"
+                  class="works flex-col justify-center items-center"
+                >
+                  <div class="w-[190px] h-[190px] mt-[10px]">
+                    <img
+                      class="object-cover object-top w-full h-full rounded-full"
+                      src="./public/work-metiew-smith.jpg"
+                    />
+                  </div>
+                  <h4 class="font-[800] my-[30px] uppercase text-center md:mt-[50px]">
+                    Metiew & Smith
+                  </h4>
+                  <p class="max-w-[300px] font-[600] text-[15px] text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
+                    do.
+                  </p>
+                </div>
+                <div
+                  childnum="2"
+                  class="works flex-col justify-center items-center"
+                >
+                  <div class="w-[190px] h-[190px] mt-[10px]">
+                    <img
+                      class="object-cover object-top w-full h-full rounded-full"
+                      src="./public/work-alex-nowak.jpg"
+                    />
+                  </div>
+                  <h4 class="font-[800] my-[30px] uppercase text-center md:mt-[50px]">
+                    Alex Nowak
+                  </h4>
+                  <p class="max-w-[300px] font-[600] text-[15px] text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
+                    do.
+                  </p>
+                </div>
+              </div>
+              <span
+                id="page2__prevBtn"
+                class="absolute bg-[#282828] left-0 top-[25%] w-[50px] flex items-center justify-center rounded-full h-[50px]"
+              >
+                <svg
+                  class="w-[20px]"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 150 118"
+                  style="enable-background: new 0 0 150 118"
+                  xml:space="preserve"
+                >
+                  <g
+                    transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)"
+                  >
+                    <path
+                      fill="#fff"
+                      d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"
+                    ></path>
+                  </g>
+                </svg>
+              </span>
+              <span
+                id="page2__nextBtn"
+                class="absolute bg-[#282828] right-0 top-[25%] w-[50px] flex items-center justify-center rounded-full h-[50px] text-white"
+              >
+                <svg
+                  class="w-[20px]"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 150 118"
+                  style="enable-background: new 0 0 150 118"
+                  xml:space="preserve"
+                >
+                  <g
+                    transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)"
+                  >
+                    <path
+                      fill="#fff"
+                      d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"
+                    ></path>
+                  </g>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </section>
+        <section
           class="pages page__num__3 w-full h-[100vh] max-w-[1060px] z-[-1] absolute bg-[#0C0C0C] flex flex-col items-center justify-center text-white px-[5%] pb-[5%]"
         >
-          <div
-            class="h-full sm:h-auto w-full flex justify-center items-center"
-          >
+          <div class="h-full sm:h-auto w-full flex justify-center items-center">
             <div class="page3--headerContainer relative">
               <h2
                 class="text-[55px] sm:max-md:text-[44px] md:text-[68px] font-[900] leading-[55px] md:leading-[65px] sm:leading-[40px] mb-10 relative page3--header"
@@ -185,7 +287,7 @@
               </h5>
             </div>
           </div>
-        </div>
+        </section>
         <div
           class="pages page__num__4 w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
         >
@@ -223,12 +325,75 @@
           </p>
         </div>
         <div class="divider w-full h-[100vh] bg-[#0C0C0C] z-[0]"></div>
-      </div>
+      </main>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      const worksContainer = document.querySelector(".worksContainer");
+      const prevBtn = document.querySelector("#page2__prevBtn");
+      const nextBtn = document.querySelector("#page2__nextBtn");
+
+      prevBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const tl = gsap.timeline();
+        tl.to(".worksContainer", {
+          opacity: 0,
+          duration: .3,
+          ease: "linear",
+          onComplete: () => {
+            handleMove("prev");
+          },
+        }).to(".worksContainer", {
+          opacity: 1,
+          delay: .2,
+          duration: .3,
+          ease: "linear",
+        });
+      });
+
+      nextBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const tl = gsap.timeline();
+        tl.to(".worksContainer", {
+          opacity: 0,
+          duration: .3,
+          ease: "linear",
+          onComplete: () => {
+            handleMove("prev");
+          },
+        }).to(".worksContainer", {
+          opacity: 1,
+          delay: .2,
+          duration: .3,
+          ease: "linear",
+        });
+      });
+
+      function handleMove(dir) {
+        const firstChild = document.querySelector('[childnum="0"]');
+        const LastChild = document.querySelector('[childnum="2"]');
+        if (dir === "next") {
+          worksContainer.removeChild(firstChild);
+          worksContainer.appendChild(firstChild);
+        } else {
+          worksContainer.removeChild(LastChild);
+          worksContainer.insertBefore(LastChild, firstChild);
+        }
+        addNewNum();
+      }
+
+      function addNewNum() {
+        const works = document.querySelectorAll(".works");
+        works.forEach((work, i) => {
+          work.setAttribute("childnum", i);
+          console.log(work);
+        });
+      }
+    </script>
     <script>
       const pages = gsap.utils.toArray(".pages");
       const isTouchSupported = "ontouchstart" in document.documentElement;
@@ -239,26 +404,26 @@
         nextPage: 2,
       };
 
-      // Observer.create({
-      //   target: window,
-      //   type: "wheel,pointer",
-      //   onUp: (e, a) => {
-      //     if (!isMovingAllowed) return;
-      //     if (isTouchSupported) {
-      //       goNextPage();
-      //     } else {
-      //       goPreviousPage();
-      //     }
-      //   },
-      //   onDown: (e) => {
-      //     if (!isMovingAllowed) return;
-      //     if (isTouchSupported) {
-      //       goPreviousPage();
-      //     } else {
-      //       goNextPage();
-      //     }
-      //   },
-      // });
+      Observer.create({
+        target: window,
+        type: "wheel,pointer",
+        onUp: (e, a) => {
+          if (!isMovingAllowed) return;
+          if (isTouchSupported) {
+            goNextPage();
+          } else {
+            goPreviousPage();
+          }
+        },
+        onDown: (e) => {
+          if (!isMovingAllowed) return;
+          if (isTouchSupported) {
+            goPreviousPage();
+          } else {
+            goNextPage();
+          }
+        },
+      });
 
       function goNextPage() {
         setStyle("next");
