@@ -14,10 +14,10 @@
   </head>
   <body>
     <div
-      class="bg-[#0C0C0C] w-[100vw] h-[100vh] mainContainer flex flex-col items-center"
+      class="bg-[--page-black] w-[100vw] h-[100vh] mainContainer flex flex-col items-center"
     >
       <main
-        class="pageContainer w-full max-w-[1550px] h-[100vh] fixed bg-[#0C0C0C] flex flex-col items-center justify-end overflow-hidden"
+        class="pageContainer w-full max-w-[1550px] h-[100vh] fixed bg-[--page-black] flex flex-col items-center justify-end overflow-hidden"
       >
         <header class="w-full z-[2] w-full px-[5%] py-5">
           <nav class="flex justify-between items-center">
@@ -104,10 +104,12 @@
           </div>
         </section>
         <section
-          class="pages page__num__2 max-w-[1000px] flex justify-center items-center w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
+          class="pages page__num__2 max-w-[1000px] flex justify-center items-center w-full h-[100vh] z-[-1] absolute bg-[--page-black] text-white p-5"
         >
           <div class="w-full flex flex-col">
-            <h2 class="text-[30px] font-[700] text-center mb-[20px] md:mb-[6rem]">
+            <h2
+              class="text-[30px] font-[700] text-center mb-[20px] md:mb-[6rem]"
+            >
               Selected work
             </h2>
             <div class="relative">
@@ -122,7 +124,9 @@
                       src="./public/work-victory.jpg"
                     />
                   </div>
-                  <h4 class="font-[800] my-[30px] uppercase text-center md:mt-[50px]">
+                  <h4
+                    class="font-[800] my-[30px] uppercase text-center md:mt-[50px]"
+                  >
                     Victory
                   </h4>
                   <p class="max-w-[300px] font-[600] text-[15px] text-center">
@@ -140,7 +144,9 @@
                       src="./public/work-metiew-smith.jpg"
                     />
                   </div>
-                  <h4 class="font-[800] my-[30px] uppercase text-center md:mt-[50px]">
+                  <h4
+                    class="font-[800] my-[30px] uppercase text-center md:mt-[50px]"
+                  >
                     Metiew & Smith
                   </h4>
                   <p class="max-w-[300px] font-[600] text-[15px] text-center">
@@ -158,7 +164,9 @@
                       src="./public/work-alex-nowak.jpg"
                     />
                   </div>
-                  <h4 class="font-[800] my-[30px] uppercase text-center md:mt-[50px]">
+                  <h4
+                    class="font-[800] my-[30px] uppercase text-center md:mt-[50px]"
+                  >
                     Alex Nowak
                   </h4>
                   <p class="max-w-[300px] font-[600] text-[15px] text-center">
@@ -225,7 +233,7 @@
           </div>
         </section>
         <section
-          class="pages page__num__3 w-full h-[100vh] max-w-[1060px] z-[-1] absolute bg-[#0C0C0C] flex flex-col items-center justify-center text-white px-[5%] pb-[5%]"
+          class="pages page__num__3 w-full h-[100vh] max-w-[1060px] z-[-1] absolute bg-[--page-black] flex flex-col items-center justify-center text-white px-[5%] pb-[5%]"
         >
           <div class="h-full sm:h-auto w-full flex justify-center items-center">
             <div class="page3--headerContainer relative">
@@ -288,26 +296,50 @@
             </div>
           </div>
         </section>
-        <div
-          class="pages page__num__4 w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
+        <section
+          class="pages page__num__4 w-full h-[100vh] z-[1] absolute bg-[--page-black] text-white p-5"
         >
-          <h1 class="text-[50px] font-bold m-[50px]">page header num 4</h1>
-          <p class="text-[20px] font-bold m-[50px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quis
-            temporibus voluptatum. Repellendus, fugiat ratione nostrum tempora
-            fuga voluptatibus deleniti voluptatem iure optio totam id error amet
-            dolore, magni laborum.
-          </p>
-          <hr />
-          <p class="text-[20px] font-bold m-[50px]">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Consequatur, minima alias harum laborum omnis totam magnam quo
-            libero quibusdam quae cumque, id quidem optio laudantium quasi
-            nostrum! Ipsam, eos dolore.
-          </p>
-        </div>
+          <div
+            class="w-full h-full absolute top-0 left-0 page4-bg"
+          >
+            <div class="w-full h-full flex justify-center items-center md:justify-end max-w-[1300px]">
+              <div
+                class="bg-[--page-black] px-[40px] py-[50px] text-[14px] text-center page4-bx-shadow md:mr-[70px]"
+              >
+                <address class="font-[700] not-italic">
+                  Pawia 5, 31-154 Kraków, Poland<br />
+                  <a
+                    href="mailto:ouremail@gmail.com"
+                    class="inline-block my-[15px]"
+                    >ouremail@gmail.com</a
+                  ><br />
+                  <a href="tel:+48 12 628 75 60">+48 12 628 75 60</a>
+                </address>
+                <div
+                  class="py-[10px] flex flex-col justify-center items-center gap-[25px]"
+                >
+                  <button
+                    class="font-[700] py-[10px] min-w-[130px] bg-[#1769FF]"
+                  >
+                    Bēhance
+                  </button>
+                  <button
+                    class="font-[700] py-[10px] min-w-[130px] bg-[#EA4C89]"
+                  >
+                    dribbble
+                  </button>
+                  <button
+                    class="font-[700] py-[10px] min-w-[130px] bg-[#0F33FF]"
+                  >
+                    Contact Us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <div
-          class="pages page__num__5 w-full h-[100vh] z-[-1] absolute bg-[#0C0C0C] text-white p-5"
+          class="pages page__num__5 w-full h-[100vh] z-[-1] absolute bg-[--page-black] text-white p-5"
         >
           <h1 class="text-[50px] font-bold m-[50px]">page header num 5</h1>
           <p class="text-[20px] font-bold m-[50px]">
@@ -324,7 +356,7 @@
             iusto.
           </p>
         </div>
-        <div class="divider w-full h-[100vh] bg-[#0C0C0C] z-[0]"></div>
+        <div class="divider w-full h-[100vh] bg-[--page-black] z-[0]"></div>
       </main>
     </div>
 
@@ -342,15 +374,15 @@
         const tl = gsap.timeline();
         tl.to(".worksContainer", {
           opacity: 0,
-          duration: .3,
+          duration: 0.3,
           ease: "linear",
           onComplete: () => {
             handleMove("prev");
           },
         }).to(".worksContainer", {
           opacity: 1,
-          delay: .2,
-          duration: .3,
+          delay: 0.2,
+          duration: 0.3,
           ease: "linear",
         });
       });
@@ -360,15 +392,15 @@
         const tl = gsap.timeline();
         tl.to(".worksContainer", {
           opacity: 0,
-          duration: .3,
+          duration: 0.3,
           ease: "linear",
           onComplete: () => {
             handleMove("prev");
           },
         }).to(".worksContainer", {
           opacity: 1,
-          delay: .2,
-          duration: .3,
+          delay: 0.2,
+          duration: 0.3,
           ease: "linear",
         });
       });

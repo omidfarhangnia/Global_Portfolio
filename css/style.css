@@ -1,6 +1,7 @@
 @layer utilities {
   :root {
     --page-blue: #0f33ff;
+    --page-black: #0C0C0C;
   }
 
   body {
@@ -108,7 +109,7 @@
     background: linear-gradient(
       to right bottom,
       var(--page-blue) 50%,
-      #0c0c0c 50%
+      var(--page-black) 50%
     );
     right: 50%;
     top: -2%;
@@ -159,6 +160,17 @@
 
   div[childnum="1"] > p {
     display: block;
+  }
+
+  .page4-bg {
+    background-image: url(../public/contact-visual.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .page4-bx-shadow {
+    -webkit-box-shadow: 0px 0px 92px 4px var(--page-black);
+    box-shadow: 0px 0px 30px 10px var(--page-black);
   }
 }
 
