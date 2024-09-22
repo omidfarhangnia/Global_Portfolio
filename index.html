@@ -31,7 +31,7 @@
           </nav>
         </header>
         <section
-          class="pages page__num__1 flex flex-col w-full max-w-[1060px] z-[1] absolute text-white px-[5%] pb-[5%] overflow-hidden"
+          class="pages page__num__1 flex flex-col w-full max-w-[1000px] z-[1] absolute text-white px-[5%] pb-[5%] overflow-hidden"
         >
           <div class="flex w-full justify-evenly">
             <div class="w-full sm:w-[45%] flex flex-col md:justify-center">
@@ -104,7 +104,7 @@
           </div>
         </section>
         <section
-          class="pages page__num__2 max-w-[1000px] flex justify-center items-center w-full h-[100vh] z-[-1] absolute bg-[--page-black] text-white p-5"
+          class="pages page__num__2 max-w-[900px] flex justify-center items-center w-full h-[100vh] z-[-1] absolute bg-[--page-black] text-white p-5"
         >
           <div class="w-full flex flex-col">
             <h2
@@ -233,7 +233,7 @@
           </div>
         </section>
         <section
-          class="pages page__num__3 w-full h-[100vh] max-w-[1060px] z-[-1] absolute bg-[--page-black] flex flex-col items-center justify-center text-white px-[5%] pb-[5%]"
+          class="pages page__num__3 w-full h-[100vh] max-w-[1000px] z-[-1] absolute bg-[--page-black] flex flex-col items-center justify-center text-white px-[5%] pb-[5%]"
         >
           <div class="h-full sm:h-auto w-full flex justify-center items-center">
             <div class="page3--headerContainer relative">
@@ -339,7 +339,7 @@
           </div>
         </section>
         <section
-          class="pages page__num__5 w-full h-[100vh] z-[1] absolute bg-[--page-black] text-white p-5 flex justify-center items-center"
+          class="pages page__num__5 w-full h-[100vh] z-[-1] absolute bg-[--page-black] text-white p-5 flex justify-center items-center"
         >
           <div class="md:w-[70%]">
             <h2 class="text-center font-[700] text-[30px] mb-[50px]">
@@ -532,6 +532,45 @@
             </form>
           </div>
         </section>
+        <div
+          class="side-nav hidden z-[2] w-[100px] h-[70vh] border-l-solid border-l-[2px] border-l-[#555555] absolute text-white left-[4vw] top-[15vh] min-[1180px]:flex justify-evenly flex-col"
+        >
+          <button class="pageNav-num-1 flex items-center gap-[10px] relative">
+            <span
+              class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
+            ></span>
+            <span class="number text-[#555555]">01</span>
+            <span class="label opacity-0 absolute left-[2vw]">Home</span>
+          </button>
+          <button class="pageNav-num-2 flex items-center gap-[10px] relative">
+            <span
+              class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
+            ></span>
+            <span class="number text-[#555555]">02</span>
+            <span class="label opacity-0 absolute left-[2vw]">Works</span>
+          </button>
+          <button class="pageNav-num-3 flex items-center gap-[10px] relative">
+            <span
+              class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
+            ></span>
+            <span class="number text-[#555555]">03</span>
+            <span class="label opacity-0 absolute left-[2vw]">About</span>
+          </button>
+          <button class="pageNav-num-4 flex items-center gap-[10px] relative">
+            <span
+              class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
+            ></span>
+            <span class="number text-[#555555]">04</span>
+            <span class="label opacity-0 absolute left-[2vw]">Contact</span>
+          </button>
+          <button class="pageNav-num-5 flex items-center gap-[10px] relative">
+            <span
+              class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
+            ></span>
+            <span class="number text-[#555555]">05</span>
+            <span class="label opacity-0 absolute left-[2vw]">Hire us</span>
+          </button>
+        </div>
         <div class="divider w-full h-[100vh] bg-[--page-black] z-[0]"></div>
       </main>
     </div>
@@ -612,6 +651,8 @@
         nextPage: 2,
       };
 
+      animateSideNav();
+
       Observer.create({
         target: window,
         type: "wheel,pointer",
@@ -636,11 +677,13 @@
       function goNextPage() {
         setStyle("next");
         updatePageNumbers("next");
+        animateSideNav("next");
       }
 
       function goPreviousPage() {
         setStyle("previous");
         updatePageNumbers("previous");
+        animateSideNav("previous");
       }
 
       function setStyle(status) {
@@ -714,11 +757,69 @@
         }
       }
 
-      // // other page update
-      // const othePagesSet = new Set([1, 2, 3, 4, 5]);
-      // othePagesSet.delete(pageData.currentPage);
-      // othePagesSet.delete(pageData.nextPage);
-      // pageData.otherPages = Array.from(othePagesSet);
+      function animateSideNav(status) {
+        const tl = gsap.timeline();
+
+        tl.to(
+          `.pageNav-num-${pageData.currentPage} .number`,
+          {
+            x: "-50",
+            color: "#ffffff",
+            duration: 0.5,
+          },
+          "startTogether"
+        )
+          .to(
+            `.pageNav-num-${pageData.currentPage} .ball`,
+            {
+              scale: 5,
+              duration: 0.5,
+              delay: 0.3,
+            },
+            "startTogether"
+          )
+          .to(
+            `.pageNav-num-${pageData.currentPage} .label`,
+            {
+              opacity: 1,
+              color: "#ffffff",
+              delay: 0.3,
+            },
+            "startTogether"
+          )
+          .to(
+            `.pageNav-num-${
+              status === "next" ? pageData.prevPage : pageData.nextPage
+            } .number`,
+            {
+              x: "0",
+              color: "#555555",
+              duration: 0.5,
+              delay: 0.3,
+            },
+            "startTogether"
+          )
+          .to(
+            `.pageNav-num-${
+              status === "next" ? pageData.prevPage : pageData.nextPage
+            } .ball`,
+            {
+              scale: 1,
+              duration: 0.5,
+            },
+            "startTogether"
+          )
+          .to(
+            `.pageNav-num-${
+              status === "next" ? pageData.prevPage : pageData.nextPage
+            } .label`,
+            {
+              opacity: 0,
+              color: "#555555",
+            },
+            "startTogether"
+          );
+      }
     </script>
     <script>
       const checkboxes = document.querySelectorAll(".page5-checkbox");
