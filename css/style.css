@@ -2,6 +2,7 @@
   :root {
     --page-blue: #0f33ff;
     --page-black: #0c0c0c;
+    --active--circle--width: 20px;
   }
 
   body {
@@ -26,7 +27,30 @@
 
   .perspectivePage {
     outline: 30px solid var(--page-blue);
-    transform: translateZ(-100px) translateX(30%) rotateY(45deg) scale(0.5);
+    transform: translateZ(-100px) translateX(5%) rotateY(45deg) scale(0.5);
+  }
+
+  .active--page {
+    position: relative;
+  }
+
+  .active--page::after {
+    content: "";
+    position: absolute;
+    left: calc(var(--active--circle--width) * -1 - 10px);
+    top: calc(50% - var(--active--circle--width) / 2);
+    width: var(--active--circle--width);
+    height: var(--active--circle--width);
+    border-radius: 50%;
+    background: var(--page-blue);
+  }
+
+  .page_num_1--prag {
+    display: none;
+  }
+
+  .page_num_1--header {
+    margin: 0 0 30vh 0;
   }
 
   .nav--toggle {
@@ -270,5 +294,27 @@
 
   .page5-checkbox {
     font-size: 16px;
+  }
+}
+
+@media (min-height: 700px) {
+  .page_num_1--prag {
+    display: flex;
+  }
+
+  .page_num_1--header {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --active--circle--width: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --active--circle--width: 35px;
   }
 }

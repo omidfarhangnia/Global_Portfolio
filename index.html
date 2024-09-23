@@ -14,7 +14,7 @@
   </head>
   <body>
     <div
-      class="bg-[--page-black] w-[100vw] h-[100vh] mainContainer flex flex-col items-center"
+      class="bg-[--page-black] w-[100vw] h-[100vh] mainContainer flex flex-col items-center justify-center"
     >
       <main
         class="pageContainer w-full max-w-[1550px] h-[100vh] fixed bg-[--page-black] flex flex-col items-center justify-end overflow-hidden"
@@ -31,9 +31,9 @@
           </nav>
         </header>
         <section
-          class="pages page__num__1 flex flex-col w-full max-w-[1000px] z-[1] absolute text-white px-[5%] pb-[5%] overflow-hidden"
+          class="pages page__num__1 flex flex-col w-full max-w-[1000px] z-[1] absolute text-white px-[5%] py-[5%] overflow-hidden"
         >
-          <div class="flex w-full justify-evenly">
+          <div class="flex page_num_1--header w-full justify-evenly">
             <div class="w-full sm:w-[45%] flex flex-col md:justify-center">
               <h1
                 class="text-[55px] sm:max-md:text-[44px] md:text-[68px] font-[900] leading-[55px] md:leading-[65px]"
@@ -75,7 +75,7 @@
             />
           </div>
           <div
-            class="py-[33px] mb-[90px] flex gap-[40px] flex-col md:flex-row border-t-2 border-[#282828] border-solid text-[#a4a4a4]"
+            class="page_num_1--prag py-[33px] mb-[90px] gap-[40px] flex-col md:flex-row border-t-2 border-[#282828] border-solid text-[#a4a4a4]"
           >
             <div
               class="hover:text-white transition-all select-none curser-default"
@@ -304,7 +304,7 @@
               class="w-full h-full flex justify-center items-center md:justify-end max-w-[1300px]"
             >
               <div
-                class="bg-[--page-black] px-[40px] py-[50px] text-[14px] text-center page4-bx-shadow md:mr-[70px]"
+                class="page__num__3--card bg-[--page-black] px-[40px] py-[50px] text-[14px] text-center page4-bx-shadow md:mr-[70px]"
               >
                 <address class="font-[700] not-italic">
                   Pawia 5, 31-154 Kraków, Poland<br />
@@ -342,10 +342,12 @@
           class="pages page__num__5 w-full h-[100vh] z-[-1] absolute bg-[--page-black] text-white p-5 flex justify-center items-center"
         >
           <div class="md:w-[70%]">
-            <h2 class="text-center font-[700] text-[30px] mb-[50px]">
+            <h2
+              class="text-center select-none font-[700] text-[30px] mb-[50px]"
+            >
               You want us to do
             </h2>
-            <form action="#">
+            <form action="#" id="hireUsForm">
               <div class="checkbox-container mb-[35px]">
                 <div
                   objLabel="appDesign"
@@ -535,343 +537,93 @@
         <div
           class="side-nav hidden z-[2] w-[100px] h-[70vh] border-l-solid border-l-[2px] border-l-[#555555] absolute text-white left-[4vw] top-[15vh] min-[1180px]:flex justify-evenly flex-col"
         >
-          <button class="pageNav-num-1 flex items-center gap-[10px] relative">
+          <div
+            class="pageNav-num-1 flex cursor-default items-center gap-[10px] relative"
+          >
             <span
               class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
             ></span>
             <span class="number text-[#555555]">01</span>
             <span class="label opacity-0 absolute left-[2vw]">Home</span>
-          </button>
-          <button class="pageNav-num-2 flex items-center gap-[10px] relative">
+          </div>
+          <div
+            class="pageNav-num-2 flex cursor-default items-center gap-[10px] relative"
+          >
             <span
               class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
             ></span>
             <span class="number text-[#555555]">02</span>
             <span class="label opacity-0 absolute left-[2vw]">Works</span>
-          </button>
-          <button class="pageNav-num-3 flex items-center gap-[10px] relative">
+          </div>
+          <div
+            class="pageNav-num-3 flex cursor-default items-center gap-[10px] relative"
+          >
             <span
               class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
             ></span>
             <span class="number text-[#555555]">03</span>
             <span class="label opacity-0 absolute left-[2vw]">About</span>
-          </button>
-          <button class="pageNav-num-4 flex items-center gap-[10px] relative">
+          </div>
+          <div
+            class="pageNav-num-4 flex cursor-default items-center gap-[10px] relative"
+          >
             <span
               class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
             ></span>
             <span class="number text-[#555555]">04</span>
             <span class="label opacity-0 absolute left-[2vw]">Contact</span>
-          </button>
-          <button class="pageNav-num-5 flex items-center gap-[10px] relative">
+          </div>
+          <div
+            class="pageNav-num-5 flex cursor-default items-center gap-[10px] relative"
+          >
             <span
               class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
             ></span>
             <span class="number text-[#555555]">05</span>
             <span class="label opacity-0 absolute left-[2vw]">Hire us</span>
-          </button>
+          </div>
         </div>
         <div class="divider w-full h-[100vh] bg-[--page-black] z-[0]"></div>
       </main>
+      <div class="mr-[10vw] z-[-1] absolute right-0">
+        <nav>
+          <ul>
+            <li
+              class="text-white text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links active--page"
+            >
+              Home
+            </li>
+            <li
+              class="text-white text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
+            >
+              Works
+            </li>
+            <li
+              class="text-white text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
+            >
+              About
+            </li>
+            <li
+              class="text-white text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
+            >
+              Contact
+            </li>
+            <li
+              class="text-white text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
+            >
+              Hire us
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script>
-      const worksContainer = document.querySelector(".worksContainer");
-      const prevBtn = document.querySelector("#page2__prevBtn");
-      const nextBtn = document.querySelector("#page2__nextBtn");
-
-      prevBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const tl = gsap.timeline();
-        tl.to(".worksContainer", {
-          opacity: 0,
-          duration: 0.3,
-          ease: "linear",
-          onComplete: () => {
-            handleMove("prev");
-          },
-        }).to(".worksContainer", {
-          opacity: 1,
-          delay: 0.2,
-          duration: 0.3,
-          ease: "linear",
-        });
-      });
-
-      nextBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const tl = gsap.timeline();
-        tl.to(".worksContainer", {
-          opacity: 0,
-          duration: 0.3,
-          ease: "linear",
-          onComplete: () => {
-            handleMove("prev");
-          },
-        }).to(".worksContainer", {
-          opacity: 1,
-          delay: 0.2,
-          duration: 0.3,
-          ease: "linear",
-        });
-      });
-
-      function handleMove(dir) {
-        const firstChild = document.querySelector('[childnum="0"]');
-        const LastChild = document.querySelector('[childnum="2"]');
-        if (dir === "next") {
-          worksContainer.removeChild(firstChild);
-          worksContainer.appendChild(firstChild);
-        } else {
-          worksContainer.removeChild(LastChild);
-          worksContainer.insertBefore(LastChild, firstChild);
-        }
-        addNewNum();
-      }
-
-      function addNewNum() {
-        const works = document.querySelectorAll(".works");
-        works.forEach((work, i) => {
-          work.setAttribute("childnum", i);
-          console.log(work);
-        });
-      }
-    </script>
-    <script>
-      const pages = gsap.utils.toArray(".pages");
-      const isTouchSupported = "ontouchstart" in document.documentElement;
-      let isMovingAllowed = true;
-      let pageData = {
-        prevPage: 5,
-        currentPage: 1,
-        nextPage: 2,
-      };
-
-      animateSideNav();
-
-      Observer.create({
-        target: window,
-        type: "wheel,pointer",
-        onUp: (e, a) => {
-          if (!isMovingAllowed) return;
-          if (isTouchSupported) {
-            goNextPage();
-          } else {
-            goPreviousPage();
-          }
-        },
-        onDown: (e) => {
-          if (!isMovingAllowed) return;
-          if (isTouchSupported) {
-            goPreviousPage();
-          } else {
-            goNextPage();
-          }
-        },
-      });
-
-      function goNextPage() {
-        setStyle("next");
-        updatePageNumbers("next");
-        animateSideNav("next");
-      }
-
-      function goPreviousPage() {
-        setStyle("previous");
-        updatePageNumbers("previous");
-        animateSideNav("previous");
-      }
-
-      function setStyle(status) {
-        const tl = gsap.timeline();
-
-        tl.to(`.page__num__${pageData.currentPage}`, {
-          y: "-=50px",
-          duration: 0.3,
-          opacity: 0,
-          ease: "circ.in",
-          onStart: () => {
-            isMovingAllowed = false;
-          },
-        })
-          .set(`.page__num__${pageData.currentPage}`, {
-            y: 0,
-            zIndex: "-1",
-            opacity: 1,
-          })
-          .set(
-            `.page__num__${
-              status === "next" ? pageData.nextPage : pageData.prevPage
-            }`,
-            {
-              zIndex: "1",
-              opacity: 0,
-            }
-          )
-          .from(
-            `.page__num__${
-              status === "next" ? pageData.nextPage : pageData.prevPage
-            }`,
-            {
-              y: "+=50px",
-              duration: 0.3,
-              opacity: "1",
-              onComplete: () => {
-                isMovingAllowed = true;
-              },
-            }
-          );
-      }
-
-      function increaseNum(vairable) {
-        if (pageData[vairable] === 5) {
-          pageData[vairable] = 1;
-        } else {
-          pageData[vairable]++;
-        }
-      }
-
-      function decreaseNum(vairable) {
-        if (pageData[vairable] === 1) {
-          pageData[vairable] = 5;
-        } else {
-          pageData[vairable]--;
-        }
-      }
-
-      function updatePageNumbers(status) {
-        if (status === "next") {
-          // updating data in next status
-          increaseNum("prevPage");
-          increaseNum("currentPage");
-          increaseNum("nextPage");
-        } else if (status === "previous") {
-          // updating data in previous status
-          decreaseNum("prevPage");
-          decreaseNum("currentPage");
-          decreaseNum("nextPage");
-        }
-      }
-
-      function animateSideNav(status) {
-        const tl = gsap.timeline();
-
-        tl.to(
-          `.pageNav-num-${pageData.currentPage} .number`,
-          {
-            x: "-50",
-            color: "#ffffff",
-            duration: 0.5,
-          },
-          "startTogether"
-        )
-          .to(
-            `.pageNav-num-${pageData.currentPage} .ball`,
-            {
-              scale: 5,
-              duration: 0.5,
-              delay: 0.3,
-            },
-            "startTogether"
-          )
-          .to(
-            `.pageNav-num-${pageData.currentPage} .label`,
-            {
-              opacity: 1,
-              color: "#ffffff",
-              delay: 0.3,
-            },
-            "startTogether"
-          )
-          .to(
-            `.pageNav-num-${
-              status === "next" ? pageData.prevPage : pageData.nextPage
-            } .number`,
-            {
-              x: "0",
-              color: "#555555",
-              duration: 0.5,
-              delay: 0.3,
-            },
-            "startTogether"
-          )
-          .to(
-            `.pageNav-num-${
-              status === "next" ? pageData.prevPage : pageData.nextPage
-            } .ball`,
-            {
-              scale: 1,
-              duration: 0.5,
-            },
-            "startTogether"
-          )
-          .to(
-            `.pageNav-num-${
-              status === "next" ? pageData.prevPage : pageData.nextPage
-            } .label`,
-            {
-              opacity: 0,
-              color: "#555555",
-            },
-            "startTogether"
-          );
-      }
-    </script>
-    <script>
-      const checkboxes = document.querySelectorAll(".page5-checkbox");
-      const inputs = document.querySelectorAll(".page5-input");
-      const workStatus = {
-        appDesign: false,
-        uxDesign: false,
-        graphicDesigh: false,
-        webDesign: false,
-        motionDesign: false,
-        marketing: false,
-      };
-
-      checkboxes.forEach((member) => {
-        member.addEventListener("click", () => {
-          const selectStatus = member.getAttribute("status");
-          const objLabel = member.getAttribute("objLabel");
-
-          if (selectStatus === "selected") {
-            member.setAttribute("status", "not-selected");
-            workStatus[objLabel] = false;
-          } else {
-            member.setAttribute("status", "selected");
-            workStatus[objLabel] = true;
-          }
-        });
-      });
-
-      inputs.forEach((member) => {
-        member.addEventListener("focus", () => {
-          const prevLabel = member.previousElementSibling;
-          prevLabel.classList.add("focused-label");
-        });
-        member.addEventListener("focusout", () => {
-          const prevLabel = member.previousElementSibling;
-          prevLabel.classList.remove("focused-label");
-        });
-      });
-    </script>
-    <script>
-      // let persIsActive = false;
-      // const pageContainer = document.querySelector(".pageContainer");
-      // pageContainer.addEventListener("click", function (e) {
-      //   e.stopPropagation()
-      //   if (persIsActive) {
-      //     pageContainer.classList.remove("perspectivePage");
-      //     persIsActive = false;
-      //   } else {
-      //     pageContainer.classList.add("perspectivePage");
-      //     persIsActive = true;
-      //   }
-      // });
-    </script>
+    <script src="./js/worksPage.js"></script>
+    <script src="./js/pageAnime.js"></script>
+    <script src="./js/hireUsPage.js"></script>
   </body>
 </html>
