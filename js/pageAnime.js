@@ -58,6 +58,7 @@ pageHandlerLinks.forEach((member) => {
   member.addEventListener("click", function (e) {
     const btnNum = Number(member.getAttribute("btnNum"));
     const lastPage = pageData.currentPage;
+    if(btnNum === lastPage) return
     setStyle("jump", btnNum);
     updatePageNumbers("jump", btnNum);
     animateSideNav("jump", lastPage);
