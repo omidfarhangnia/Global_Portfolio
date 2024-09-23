@@ -17,11 +17,13 @@
       class="bg-[--page-black] w-[100vw] h-[100vh] mainContainer flex flex-col items-center justify-center"
     >
       <main
-        class="pageContainer w-full max-w-[1550px] h-[100vh] fixed bg-[--page-black] flex flex-col items-center justify-end overflow-hidden"
+        class="main pageContainer w-full max-w-[1550px] h-[100vh] fixed bg-[--page-black] flex flex-col items-center justify-end overflow-hidden opacity-0"
       >
         <header class="w-full z-[2] w-full px-[5%] py-5">
           <nav class="flex justify-between items-center">
-            <a class="flex items-center"
+            <a
+              class="flex items-center"
+              href="https://freebiesbug.com/psd-freebies/global-futuristic-one-page-portfolio-psd-html/"
               ><img src="./public/logo.png" class="mr-3" alt="page logo" />
               <span class="text-white font-[900]">GLOBAL</span>
             </a>
@@ -535,81 +537,91 @@
           </div>
         </section>
         <div
-          class="side-nav hidden z-[2] w-[100px] h-[70vh] border-l-solid border-l-[2px] border-l-[#555555] absolute text-white left-[4vw] top-[15vh] min-[1180px]:flex justify-evenly flex-col"
+          class="side--nav hidden z-[2] w-[100px] h-[70vh] border-l-solid border-l-[2px] border-l-[#555555] absolute text-white left-[4vw] top-[15vh] min-[1180px]:flex justify-evenly flex-col"
         >
-          <div
-            class="pageNav-num-1 flex cursor-default items-center gap-[10px] relative"
+          <button
+            btnNum="1"
+            class="pageNav-num-1 flex items-center gap-[10px] relative"
           >
             <span
               class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
             ></span>
             <span class="number text-[#555555]">01</span>
             <span class="label opacity-0 absolute left-[2vw]">Home</span>
-          </div>
-          <div
-            class="pageNav-num-2 flex cursor-default items-center gap-[10px] relative"
+          </button>
+          <button
+            btnNum="2"
+            class="pageNav-num-2 flex items-center gap-[10px] relative"
           >
             <span
               class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
             ></span>
             <span class="number text-[#555555]">02</span>
             <span class="label opacity-0 absolute left-[2vw]">Works</span>
-          </div>
-          <div
-            class="pageNav-num-3 flex cursor-default items-center gap-[10px] relative"
+          </button>
+          <button
+            btnNum="3"
+            class="pageNav-num-3 flex items-center gap-[10px] relative"
           >
             <span
               class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
             ></span>
             <span class="number text-[#555555]">03</span>
             <span class="label opacity-0 absolute left-[2vw]">About</span>
-          </div>
-          <div
-            class="pageNav-num-4 flex cursor-default items-center gap-[10px] relative"
+          </button>
+          <button
+            btnNum="4"
+            class="pageNav-num-4 flex items-center gap-[10px] relative"
           >
             <span
               class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
             ></span>
             <span class="number text-[#555555]">04</span>
             <span class="label opacity-0 absolute left-[2vw]">Contact</span>
-          </div>
-          <div
-            class="pageNav-num-5 flex cursor-default items-center gap-[10px] relative"
+          </button>
+          <button
+            btnNum="5"
+            class="pageNav-num-5 flex items-center gap-[10px] relative"
           >
             <span
               class="ball w-[3px] h-[3px] rounded-full inline-block bg-blue-500 -translate-x-[2.5px]"
             ></span>
             <span class="number text-[#555555]">05</span>
             <span class="label opacity-0 absolute left-[2vw]">Hire us</span>
-          </div>
+          </button>
         </div>
         <div class="divider w-full h-[100vh] bg-[--page-black] z-[0]"></div>
       </main>
-      <div class="mr-[10vw] z-[-1] absolute right-0">
+      <div class="outer--nav mr-[10vw] z-[-1] absolute right-0 opacity-0">
         <nav>
           <ul>
             <li
-              class="text-white text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links active--page"
+              btnNum="1"
+              class="text-white cursor-pointer text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links active--page"
             >
               Home
             </li>
             <li
-              class="text-white text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
+              btnNum="2"
+              class="text-white cursor-pointer text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
             >
               Works
             </li>
             <li
-              class="text-white text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
+              btnNum="3"
+              class="text-white cursor-pointer text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
             >
               About
             </li>
             <li
-              class="text-white text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
+              btnNum="4"
+              class="text-white cursor-pointer text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
             >
               Contact
             </li>
             <li
-              class="text-white text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
+              btnNum="5"
+              class="text-white cursor-pointer text-[30px] md:text-[45px] lg:text-[60px] lg:tracking-[5px] font-[900] nav--links"
             >
               Hire us
             </li>
@@ -617,11 +629,9 @@
         </nav>
       </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script src="./js/worksPage.js"></script>
     <script src="./js/pageAnime.js"></script>
     <script src="./js/hireUsPage.js"></script>

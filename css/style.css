@@ -22,7 +22,7 @@
     outline: 0px solid var(--page-blue);
     transform-origin: 0% 50%;
     -webkit-transition: -webkit-transform 0.4s;
-    transition: transform 0.4s, -webkit-transform 0.4s, outline 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s, outline 0.2s;
   }
 
   .perspectivePage {
