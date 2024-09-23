@@ -1,5 +1,4 @@
-const pages = gsap.utils.toArray(".pages");
-const sideNavBtns = document.querySelectorAll(".side-nav button");
+const navLinks = document.querySelectorAll(".nav--links");
 const isTouchSupported = "ontouchstart" in document.documentElement;
 let isMovingAllowed = true;
 let pageData = {
@@ -8,44 +7,48 @@ let pageData = {
   nextPage: 2,
 };
 
-sideNavBtns.forEach((member, index) => {
-  const pageNum = index + 1;
-  member.addEventListener("click", function () {});
-});
-
 animateSideNav();
 
-Observer.create({
-  target: window,
-  type: "wheel,pointer",
-  onUp: (e, a) => {
-    if (!isMovingAllowed) return;
-    if (isTouchSupported) {
+if (isTouchSupported) {
+  Observer.create({
+    target: window,
+    type: "pointer",
+    onUp: (e, a) => {
+      if (!isMovingAllowed) return;
       goNextPage();
-    } else {
+    },
+    onDown: (e) => {
+      if (!isMovingAllowed) return;
       goPreviousPage();
-    }
-  },
-  onDown: (e) => {
-    if (!isMovingAllowed) return;
-    if (isTouchSupported) {
+    },
+  });
+} else {
+  Observer.create({
+    target: window,
+    type: "wheel",
+    onUp: (e, a) => {
+      if (!isMovingAllowed) return;
       goPreviousPage();
-    } else {
+    },
+    onDown: (e) => {
+      if (!isMovingAllowed) return;
       goNextPage();
-    }
-  },
-});
+    },
+  });
+}
 
 function goNextPage() {
   setStyle("next");
   updatePageNumbers("next");
   animateSideNav("next");
+  updateActivePage();
 }
 
 function goPreviousPage() {
   setStyle("previous");
   updatePageNumbers("previous");
   animateSideNav("previous");
+  updateActivePage();
 }
 
 function setStyle(status) {
@@ -182,3 +185,36 @@ function animateSideNav(status) {
       "startTogether"
     );
 }
+
+function updateActivePage() {
+  const currentActivePage = document.querySelector(".active--page");
+  currentActivePage.classList.remove("active--page");
+  navLinks[pageData.currentPage - 1].classList.add("active--page")
+}
+
+// perspective animation
+let persIsActive = false;
+const pageContainer = document.querySelector(".pageContainer");
+const navToggle = document.querySelector(".nav--toggle");
+const main = document.querySelector("main");
+navToggle.addEventListener("click", function (e) {
+  e.stopPropagation();
+  if (persIsActive) {
+    pageContainer.classList.remove("perspectivePage");
+    main.classList.remove("cursor-pointer");
+    persIsActive = false;
+  } else {
+    pageContainer.classList.add("perspectivePage");
+    main.classList.add("cursor-pointer");
+    persIsActive = true;
+  }
+});
+
+pageContainer.addEventListener("click", function (e) {
+  e.stopPropagation();
+  if (persIsActive) {
+    pageContainer.classList.remove("perspectivePage");
+    main.classList.remove("cursor-pointer");
+    persIsActive = false;
+  }
+});

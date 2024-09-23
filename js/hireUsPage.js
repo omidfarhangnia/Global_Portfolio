@@ -31,6 +31,8 @@ inputs.forEach((member) => {
   });
   member.addEventListener("focusout", () => {
     const prevLabel = member.previousElementSibling;
-    prevLabel.classList.remove("focused-label");
+    if (member.value === "") {
+      prevLabel.classList.remove("focused-label");
+    }
   });
 });
